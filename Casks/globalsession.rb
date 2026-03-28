@@ -1,6 +1,6 @@
 cask "globalsession" do
-  version "1.1.0"
-  sha256 "f54f94c7ad9fbad350998b71ae7872a79e9e44449419018eb9225f1b7b4d1d9a"
+  version "1.1.1"
+  sha256 "bdac923a291b8221fb7066927a6d362fffe3e47988aebee653b3bb9d90e083f6"
 
   url "https://github.com/bzantium/globalsession/releases/download/v#{version}/GlobalSession-#{version}.dmg"
   name "GlobalSession"
