@@ -1,22 +1,22 @@
 cask "globalsession" do
-  version "1.1.3"
-  sha256 "5a5291f23f1c23f222cb525ddc3ea2bb23c3f5248095d06660033fd9cc49ed31"
+  version "2.0.0"
+  sha256 "383bf2bf10944f7c1eebb88b00ef41be21114eb7604fae7ab2c9d9d1edbe4955"
 
-  url "https://github.com/bzantium/globalsession/releases/download/v#{version}/GlobalSession-#{version}.dmg"
-  name "GlobalSession"
+  url "https://github.com/bzantium/globalsession/releases/download/v#{version}/gsession-#{version}.dmg"
+  name "gsession"
   desc "macOS menu bar app for monitoring GlobalProtect VPN session status"
   homepage "https://github.com/bzantium/globalsession"
 
   depends_on macos: ">= :ventura"
 
-  app "GlobalSession.app"
+  app "gsession.app"
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/GlobalSession.app"]
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/gsession.app"]
   end
 
   zap trash: [
-    "~/Library/Preferences/com.ryan.GlobalSession.plist",
+    "~/Library/Preferences/com.ryan.gsession.plist",
   ]
 end
